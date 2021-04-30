@@ -3,6 +3,7 @@
 
 # パイプライン
 内部処理で使われているライブラリと、主な処理過程の概要を次に示します。
+現在は名前の処理にマッチするように設計されています。
 
 ## わかち書き
 1. 制御文字・記号等のノイズを除去
@@ -17,14 +18,14 @@
 1. 必要に応じて半角を全角に変換（mojimoji）
 2. 必要に応じてカタカナからひらがな・ヘボン式に変換（romkan）
 
-現在は名前の処理にマッチするように設計されています。
+
 
 # システム要件
 
 - Python 3.8+
 
 # インストール
-`ja_text_cleaner`のほかに、形態素解析（sudachi）で使用する辞書（sudachidict_core）が必要になります。
+`ja_text_cleaner`のほかに、形態素解析（sudachi）で使用する辞書（sudachidict_core）が必要です。
 
 ``` shell
 pip install ja_text_cleaner sudachidict_core
