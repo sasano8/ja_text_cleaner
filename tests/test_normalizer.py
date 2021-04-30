@@ -1,7 +1,7 @@
 import pytest
 from pydantic import BaseModel
 
-from text_cleaner import name, normalizer, tokenizer
+from ja_text_cleaner import name, normalizer, tokenizer
 
 
 class MyType(BaseModel):

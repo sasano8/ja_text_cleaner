@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-from text_cleaner import build_trans, mappings
+from ja_text_cleaner import build_trans, mappings
 
 mapping = build_trans("A", mappings.blank, mappings.tab, mappings.newline)
 
