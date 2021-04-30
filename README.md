@@ -35,7 +35,7 @@ pip install ja_text_cleaner sudachidict_core
 
 
 ``` Python
-from text_cleaner import name
+from ja_text_cleaner import name
 
 # 制御文字・記号はノイズとして除去されます
 name.Wakachi(" \t\n\xa0a\u3000-!_")  # "a"
