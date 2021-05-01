@@ -9,7 +9,7 @@
       "module": "uvicorn",
       "args": [
         "--reload",
-        "text_cleaner.restapi:app",
+        "ja_text_cleaner.restapi:app",
       ],
       "justMyCode": false
     }

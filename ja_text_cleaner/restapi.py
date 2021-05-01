@@ -53,3 +53,15 @@ def test_神と神(text: str = "神と神"):
 
     # "\u308F\u3099"
     return unicodedata.normalize("NFC", text)
+
+
+@app.get("/analyze")
+def analyze_address(text: str):
+    from .tokenizer import Tokenizer
+
+    tokens = Tokenizer.sudachi.tokenize(text)
+    result = []
+    for t in (x for x in tokens if x.part_of_speech()[0] not in {"空白", "補助記号"}):
+        p = t.part_of_speech()
+        result.append((t.surface(), p[0], p[1], p[2], p[3], p[4], p[5]))
+    return result
